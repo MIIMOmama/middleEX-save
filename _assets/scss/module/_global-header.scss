@@ -1,0 +1,32 @@
+@use '../setting' as *;
+@use '../mixin' as *;
+
+
+
+.global-header {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.global-header--fixed {
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: colors(gray);
+    height: 80px;
+}
+
+.global-header__inner {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.global-header__wrap {
+    display: flex;
+    align-items: center;
+}

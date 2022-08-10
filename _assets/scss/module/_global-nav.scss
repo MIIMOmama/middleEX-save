@@ -1,0 +1,15 @@
+@use '../setting' as *;
+@use '../mixin' as *;
+
+.global-nav__list {
+    display: flex;
+
+    @include mq(max-lg) {
+        display: none;
+    }
+}
+
+.global-nav__item {
+    color: colors(white);
+    margin-right: 30px;
+}

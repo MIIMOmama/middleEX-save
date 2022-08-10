@@ -1,0 +1,10 @@
+@use '../setting' as *;
+@use '../mixin' as *;
+
+.global-logo {
+    margin-right: 120px;
+
+    @include mq(max-lg) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,12 @@
+
+$breakpoints: (
+    "min-sm": "screen and (min-width: 400px)",
+    "min-md": "screen and (min-width: 768px)",
+    "min-lg": "screen and (min-width: 1000px)",
+    "min-xl": "screen and (min-width: 1200px)",
+    
+    "max-sm": "screen and (max-width: 400px)",
+    "max-md": "screen and (max-width: 768px)",
+    "max-lg": "screen and (max-width: 1000px)",
+    "max-xl": "screen and (max-width: 1200px)",
+) !default;

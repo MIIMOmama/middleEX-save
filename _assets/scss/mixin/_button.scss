@@ -1,0 +1,28 @@
+@use '../setting' as *;
+$initType: 'normal';
+
+@mixin button($type: $initType) {
+
+    //共通スタイル
+
+    //サイト共通ボタンのスタイル1
+    @if($type =='global') {
+        //スタイル
+        display: inline-block;
+        text-align: center;
+        width: 170px;
+        box-sizing: border-box;
+        min-width: 103px;
+        background-color: colors(buttonColor);
+        color: colors(white);
+        font-weight: bold;
+        padding: 19px 37px;
+
+    }
+
+    //サイト共通ボタンのスタイル2
+    @else if($type =='link') {
+        //スタイル
+    }
+
+}

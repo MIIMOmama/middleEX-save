@@ -1,0 +1,13 @@
+
+@use '../setting' as *;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// 使い方
+//  @include mq(max-sm) {
+//     color: yellow;
+// }

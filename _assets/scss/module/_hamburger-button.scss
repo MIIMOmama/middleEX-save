@@ -1,0 +1,70 @@
+@use '../setting' as *;
+@use '../mixin' as *;
+
+#hamburger-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    z-index: 200;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    @include mq(max-lg) {
+        display: block;
+    }
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    transition: .3s;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger__line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 80%;
+    background-color: colors(white);
+    border-radius: 10px;
+}
+
+.hamburger::before {
+    top: 20%;
+}
+.hamburger::after {
+    bottom: 20%;
+}
+.hamburger__line {
+    top: 45%;
+}
+
+.hamburger-checkbox:checked ~ .hamburger::before {
+    top: 50%;
+    transform: rotate(45deg);
+
+}
+.hamburger-checkbox:checked ~ .hamburger::after {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+// .hamburger-checkbox:checked + .hamburger__line {
+//     display: none;
+// }これが効かないのはなぜ？
+// .hamburger-checkbox:checked ~ .hamburger .hamburger__line {
+//     display: none;
+// }こっちは効いた。
+// これも効いた。どっちが正解？↑↓
+.hamburger-checkbox:checked~.hamburger span {
+    display: none;
+}
+
+
