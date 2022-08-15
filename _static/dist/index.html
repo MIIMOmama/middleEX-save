@@ -36,13 +36,18 @@
           </span><!-- /.before-icon -->
         </h1><!-- /.global-logo -->
 
-          <nav class="global-nav">
-            <ul class="global-nav__list">
-              <li class="global-nav__item"><a href="room.html" class="global-nav__link">お部屋</a></li><!-- /.globalNav_item -->
-              <li class="global-nav__item"><a href="meal.html" class="global-nav__link">お料理</a></li><!-- /.globalNav_item -->
-              <li class="global-nav__item"><a href="onsen.html" class="global-nav__link">温泉</a></li><!-- /.globalNav_item -->
-            </ul><!-- /.global-nav_list -->
-          </nav><!-- /.global-nav -->
+        <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox">
+        <label class="hamburger" for="hamburger-checkbox">
+          <span class="hamburger__line"></span>
+        </label>
+        <nav class="global-nav">
+          <ul class="global-nav__list">
+            <li class="global-nav__item"><a href="room.html" class="global-nav__link">お部屋</a></li><!-- /.globalNav_item -->
+            <li class="global-nav__item"><a href="meal.html" class="global-nav__link">お料理</a></li><!-- /.globalNav_item -->
+            <li class="global-nav__item"><a href="onsen.html" class="global-nav__link">温泉</a></li><!-- /.globalNav_item -->
+          </ul><!-- /.global-nav_list -->
+        </nav><!-- /.global-nav -->
+        <label for="drawer-nav--toggle" class="drawer-nav--background"></label>
 
       </div><!-- /.global-header__wrap -->
 
@@ -51,20 +56,67 @@
         宿泊予約
       </a><!-- /.button -->
 
-      <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox">
-      <label class="hamburger" for="hamburger-checkbox">
-        <span class="hamburger__line"></span>
-      </label>
-      <div class="drawer-nav">
-        <ul class="drawer-nav__list">
-          <li class="drawer-nav__item"><a href="room.html" class="drawer-nav__link">お部屋</a><!-- /.drawer-nav__link --></li><!-- /.drawer-nav__item -->
-          <li class="drawer-nav__item"><a href="meal.html" class="drawer-nav__link">お料理</a><!-- /.drawer-nav__link --></li><!-- /.drawer-nav__item -->
-          <li class="drawer-nav__item"><a href="onsen.html" class="drawer-nav__link">温泉</a><!-- /.drawer-nav__link --></li><!-- /.drawer-nav__item -->
-        </ul><!-- /.drawer-nav__list -->
-      </div><!-- /.drawer-nav -->
-      <label for="drawer-nav--toggle" class="drawer-nav--background"></label>
-
     </div><!-- /.global-header__inner -->
+
+    <div id="modal" class="global-modal">
+      <div class="global-modal__content">
+        <div class="global-modal__wrap">
+          <input type="button" class="global-modal__button-close" id="" value="×">
+          <p class="global-modal__title">
+            宿泊予約
+          </p><!-- /.reserve_title -->
+        </div><!-- /.modalWrap -->
+        <div class="reserve">
+          <div class="reserve__item">
+            <label for="username" class="reserve__detail">
+              お名前
+            </label><!-- /.reserve_detail -->
+            <div class="reserve__body">
+              <div class="input-field">
+                <input type="text" name="username" id="username" class="reserve__text-box" required placeholder="例：石井正悟">
+              </div><!-- /.input-field -->
+            </div><!-- /.reserve_body -->
+          </div><!-- /.reserve_item -->
+    
+          <div class="reserve__item">
+            <label for="email" class="reserve__detail">
+              メールアドレス
+            </label><!-- /.reserve_detail -->
+            <div class="reserve__body">
+              <div class="input-field">
+                <input type="email" name="email" id="email" class="reserve__text-box" placeholder="例：Example@example.com">
+              </div><!-- /.input-field -->
+            </div><!-- /.reserve_body -->
+          </div><!-- /.reserve_item -->
+    
+          <div class="reserve__item">
+            <label for="email" class="reserve__detail">
+              ご希望プラン<span>（空いているプランのみ表示されます）</span>
+            </label><!-- /.reserve_detail -->
+            <div class="reserve__body">
+              <select name="select" class="select" required>
+                <option value=""><span class="reserve__select-text">プランを選択してください</span></option>
+                <option value="1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン </option>
+                <option value="2">②平日に優雅に楽しむ、特別宿泊プラン</option>
+                <option value="3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+              </select><!-- /#.select -->
+            </div><!-- /.reserve_body -->
+          </div><!-- /.reserve_item -->
+    
+          <div class="reserve__item">
+            <label for="text" class="reserve__detail">
+              日時選択
+            </label>
+            <div class="reserve__body">
+              <div class="input-field">
+                <input type="text" class="reserve__text-box" id="flatpickr" placeholder="日時を選択してください">
+              </div><!-- /.input-field -->
+            </div><!-- /.reserve_body -->
+          </div><!-- /.reserve_item -->
+        </div><!-- /.reserveWrap -->
+        <a href="#contact" class="reserve__button">送信する</a>
+      </div><!-- /.modal_content -->
+    </div><!-- /#modal.modal -->
   </header>
 
     <script src="js/jquery-3.6.0.min.js"></script>

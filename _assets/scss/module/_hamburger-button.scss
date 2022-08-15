@@ -44,7 +44,8 @@
     bottom: 20%;
 }
 .hamburger__line {
-    top: 45%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hamburger-checkbox:checked ~ .hamburger::before {
@@ -56,15 +57,10 @@
     top: 50%;
     transform: rotate(-45deg);
 }
-// .hamburger-checkbox:checked + .hamburger__line {
-//     display: none;
-// }これが効かないのはなぜ？
-// .hamburger-checkbox:checked ~ .hamburger .hamburger__line {
-//     display: none;
-// }こっちは効いた。
-// これも効いた。どっちが正解？↑↓
-.hamburger-checkbox:checked~.hamburger span {
+
+.hamburger-checkbox:checked + .hamburger .hamburger__line {
     display: none;
 }
+
 
 
